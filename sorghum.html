@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>选高粱地</title>
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/game22/sorghum.css">
+  <script src="./js/resize.js"></script>
+</head>
+
+<body>
+  <!-- 首页 -->
+  <div class="sorghum">
+    <div class="sorghumText">
+      <p>
+        现在有两块高粱地，每块高粱地都有可能收益、也有可能损失。收益和损失的概率都是50%，但收益和损失的大小不同，稍后给出。
+        村长将分发其中一块高粱地给您，您可以选择一块。
+        稍后给出收益和损失的大小后，您会选择哪一块高粱地？
+      </p>
+      <div class="nextPage">确定</div>
+    </div>
+  </div>
+  <div class="choice">
+    <div class="choiceMin">
+      <!-- <div class="choiceContent">
+        <div class="choiceLeft"><input type="radio" >50%概率会收益6积分；50%概率损失3.5积分。</div>
+        <div class="choiceRight"><input type="radio">50%概率会收益7.5积分；50%概率损失6.5积分。</div>
+      </div>
+      <div class="btn">确定</div> -->
+    </div>
+    
+  </div>
+  <div class="scorePage">
+    <div class="scorePageText">
+      
+    </div>
+    <div class="nextGame">确定</div>
+  </div>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/game11/sorghum.js"></script>
+  <script>
+    let nextGame=document.getElementsByClassName('nextGame')[0];
+    nextGame.addEventListener('click',function(){
+      window.location.href='index2.html'
+    },false)
+  </script>
+</body>
+
+</html>

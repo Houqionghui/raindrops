@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/game5/index4.css">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <script src="./js/resize.js"></script>
+</head>
+
+<body>
+  <!-- 画面一 -->
+  <div class="framesTwo">
+    <div class="framesTwo_text">
+      <p>
+        两周后，村长将给您的农场送20只母鸡，再等一周（即三周后）[这里同样改成两周后和三周后]每只母鸡能下一个蛋。每只母鸡可兑换10个积分，每个鸡蛋能兑换2个积分。您必须要在两周后或者三周后将所有母鸡或鸡蛋兑换成积分。现在，您面临一个选择，两周后兑换几只母鸡，留多少只母鸡到三周后再兑换积分？
+      </p>
+      <div class="pageDown">
+        <div class="nextPageBtn">开始游戏</div>
+      </div>
+    </div>
+  </div>
+  <!-- 画面二 -->
+  <div class="dragBox2">
+    <div class="dragBox2_content">
+      <!-- <div class="left"> -->
+        <!-- 一周 -->
+        <div class="chickenBox">
+          <div>我是鸡笼</div>
+          <div class="chickenBox_text">二周后兑换<span id="chickenBox_conversion">0</span>只母鸡，可兑换<span
+              id="chickenBoxIntegral">0</span>积分</div>
+        </div>
+        <!--二周 -->
+        <div class="chickenBox1">
+          <div>我是袋子</div>
+          <div class="chickenBox1_text">三周后兑换<span id="chickenBox1_conversion">0</span>只母鸡，<span
+              id="chickenEgg">0</span>个鸡蛋，可兑换<span id="chickenBox1_Integral">0</span>积分</div>
+        </div>
+      <!-- </div> -->
+    </div>
+    <div class="imgBox">
+      <!-- <img src="./img/game5/对话.gif" alt=""> -->
+    <div class="text">快把我拖进<br>鸡笼或袋子吧!</div>
+    </div>
+    <!-- 小鸡 -->
+    <div class="list">
+    </div>
+  </div>
+  <!-- 最后页 -->
+  <div class="resultPage">
+    <div class="resultPage_content">
+     
+    </div>
+  </div>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/game5/drag.js"></script>
+  <script>
+
+    function incident() {
+      let pageDown = document.getElementsByClassName('pageDown')[0];
+      pageDown.addEventListener('click', function () {
+        setTimeout(function () {
+          $('.framesTwo').fadeOut(500)
+          $('.dragBox2').fadeIn(500)
+
+        }, 50)
+      }, false)
+    }
+    incident();
+
+    // 动画效果
+    setTimeout(function () {
+        $('.imgBox').addClass('animated rotateIn ');
+        setTimeout(function () {
+          $('.imgBox').removeClass('rotateIn');
+        }, 2000);
+      }, 1000)
+
+    document.body.addEventListener('touchmove', function (e) {
+      e.preventDefault();
+    });
+    let data = [
+      { "id": 1 },
+      { "id": 2 },
+      { "id": 3 },
+      { "id": 4 },
+      { "id": 5 },
+      { "id": 6 },
+      { "id": 7 },
+      { "id": 8 },
+      { "id": 9 },
+      { "id": 10 },
+      { "id": 11 },
+      { "id": 12 },
+      { "id": 13 },
+      { "id": 14 },
+      { "id": 15 },
+      { "id": 16 },
+      { "id": 17 },
+      { "id": 18 },
+      { "id": 19 },
+      { "id": 20 }
+    ]
+    function list() {
+      let list = document.getElementsByClassName('list')[0];
+      let str = '';
+      for (let i = 0; i < data.length; i++) {
+        str += `
+                <div class="drag" id="${data[i].id}"></div>
+                `;
+        list.innerHTML = str;
+      }
+    }
+    list();
+    let num = 20;
+    // 今天兑换的
+    let conversion = document.getElementById('chickenBox_conversion'); //母鸡个数
+    let chickenBoxIntegral = document.getElementById('chickenBoxIntegral'); //得到的积分
+    let EggNumber = 0;
+    //一周后兑换的
+    let conversionTwo = document.getElementById('chickenBox1_conversion'); //母鸡个数
+    let chickenEgg = document.getElementById('chickenEgg');//鸡蛋个数
+    let IntegralTwo = document.getElementById('chickenBox1_Integral');//积分
+    let chickenNumber = 0;
+    let TwoWeeks=0;
+    //二周后
+    new Drag({
+      dragEle: '.drag', tarEle: '.chickenBox',
+      onStart: function (e) {
+        // e.innerHTML = "我被抓到了";
+      },
+      onMove: function (e) {
+        // e.innerHTML = "我在移动";
+      },
+      onMoveIn: function (e) {
+        e.style.cssText = "opacity: 1;"
+      },
+      onEnd: function (e) {
+        num--;
+        EggNumber++;
+        conversion.innerHTML = EggNumber;
+         TwoWeeks=EggNumber * 10;
+        chickenBoxIntegral.innerHTML = EggNumber * 10;
+        console.log('我已移入A区域');
+        e.remove();
+        arr();
+      },
+    });
+    //三周后
+    new Drag({
+      dragEle: '.drag', tarEle: '.chickenBox1',
+      onStart: function (e) {
+        // e.innerHTML = "我被抓到了";
+      },
+      onMove: function (e) {
+        // e.innerHTML = "我在移动";
+        // console.log('move');
+      },
+      onMoveIn: function (e) {
+        e.style.cssText = "opacity: 1;"
+      },
+      onEnd: function (e) {
+        num--;
+        chickenNumber++;
+        conversionTwo.innerHTML = chickenNumber;
+        chickenEgg.innerHTML = chickenNumber;
+        IntegralTwo.innerHTML = chickenNumber * 12;
+        console.log('我已移入B区域');
+        arr();
+        e.remove();
+      },
+    });
+    function arr() {
+      if (num == 0) {
+        setTimeout(function () {
+          $('.dragBox2').fadeOut(500)
+          $('.resultPage').fadeIn(500)
+          NextHtml();
+        }, 50)
+      }
+    }
+
+    function NextHtml(){
+      let storage=localStorage.getItem('today'); //今天兑换的积分
+      let resultPageContent=document.getElementsByClassName('resultPage_content')[0];
+      let hebdomad=localStorage.getItem('hebdomad');
+      let todayIntegrals=localStorage.getItem('todayIntegrals');
+      console.log(todayIntegrals);
+      
+      let hebdomadIntegrals=localStorage.getItem('hebdomadIntegrals');
+      let str='';
+      str+=`
+      <div class="aggregate">
+        <p>您在“今天和一周后”的选择中，选择今天兑换<span>${storage}</span>只母鸡，一周后兑换<span>${hebdomad}</span>只母鸡及<span>${hebdomad}</span>个鸡蛋。</p>
+        <p>您在“两周后和三周后”的选择中，选择今天兑换<span>${EggNumber}</span>只母鸡，一周后兑换<span>${chickenNumber}</span>只母鸡及<span>${chickenNumber}</span>个鸡蛋。</p>
+        <p>总计，您今天得到${todayIntegrals}积分，在一周后得到${hebdomadIntegrals}积分，在两周后得到${TwoWeeks}积分。</p>
+        </div>
+      `;
+      resultPageContent.innerHTML=str;
+    }
+  </script>
+</body>
+
+</html>

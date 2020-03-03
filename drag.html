@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, target-densitydpi=device-dpi, initial-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-app-web-capable" content="yes">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DRAG</title>
+    <script src="./js/resize.js"></script>
+    <link rel="stylesheet" href="./css/game5/index4.css">
+    <link rel="stylesheet" href="./css/game5/reset.min.css">
+    <link rel="stylesheet" href="./css/animate.css">
+    <script src="./js/jquery.js"></script>
+</head>
+
+<body>
+    <div class="dragBox">
+        <!-- 小鸡 -->
+        <div class="content">
+          <!-- <div class="left"> -->
+                <!-- 一周 -->
+
+                <div class="box">
+                    <div>我是鸡笼</div>
+                    <div class="box_text">今天兑换<span id="boxHen">0</span>只母鸡，可兑换<span id="boxIntegral">0</span>积分</div>
+                </div>
+                <!--二周 -->
+                <div class="box1">
+                    <div>我是袋子</div>
+                    <div class="box1_text">一周后兑换<span id="Box1Hen">0</span>只母鸡，<span id="Box1egg">0</span>个鸡蛋，可兑换<span
+                            id="Box1Integral">0</span>积分</div>
+                </div>
+            <!-- </div> -->
+        </div>
+        <div class="imgBox">
+            <!-- <img src="./img/game5/对话.gif" alt=""> -->
+          <div class="text">快把我拖进<br>鸡笼或袋子吧!</div>
+          </div>
+
+        <div class="list">
+        </div>
+    </div>
+
+
+    <script src="./js/game5/drag.js"></script>
+    <script>
+         // 动画效果
+    setTimeout(function () {
+        $('.imgBox').addClass('animated rotateIn ');
+        setTimeout(function () {
+          $('.imgBox').removeClass('rotateIn');
+        }, 2000);
+      }, 1000)
+
+
+        document.body.addEventListener('touchmove', function (e) {
+            e.preventDefault();
+        });
+        let data = [
+            { "id": 1 },
+            { "id": 2 },
+            { "id": 3 },
+            { "id": 4 },
+            { "id": 5 },
+            { "id": 6 },
+            { "id": 7 },
+            { "id": 8 },
+            { "id": 9 },
+            { "id": 10 },
+            { "id": 11 },
+            { "id": 12 },
+            { "id": 13 },
+            { "id": 14 },
+            { "id": 15 },
+            { "id": 16 },
+            { "id": 17 },
+            { "id": 18 },
+            { "id": 19 },
+            { "id": 20 }
+        ]
+        function list() {
+            let list = document.getElementsByClassName('list')[0]
+            let str = '';
+            for (let i = 0; i < data.length; i++) {
+                str += `
+                <div class="drag" id="${data[i].id}"></div>
+                `;
+                list.innerHTML = str;
+            }
+        }
+        list();
+        let arrA = [];
+        let arrB = [];
+        let boxHen = document.getElementById('boxHen');
+        let boxIntegral = document.getElementById('boxIntegral');
+        let boxNumber = '';
+        let Box1Hen = document.getElementById('Box1Hen');
+        let Box1Integral = document.getElementById('Box1Integral');
+        let Box1egg = document.getElementById('Box1egg');
+        let box1Number = '';
+        let num = 20;
+        // 今天兑换的
+        new Drag({
+            dragEle: '.drag', tarEle: '.box',
+            onStart: function (e) {
+                // e.innerHTML = "我被抓到了";
+            },
+            onMove: function (e) {
+                // e.innerHTML = "我在移动";
+            },
+            onMoveIn: function (e) {
+                e.style.cssText = "opacity: 1;"
+            },
+            onEnd: function (e) {
+                num--;
+                boxNumber++;
+                localStorage.setItem('today',boxNumber);
+                boxHen.innerHTML = boxNumber;
+                let todayIntegral=boxNumber * 10;
+                console.log(todayIntegral);
+                
+                boxIntegral.innerHTML = boxNumber * 10;
+                localStorage.setItem('todayIntegrals',todayIntegral);
+                console.log('我已移入A区域');
+                arrA.push(e.id);
+                e.remove();
+                arr();
+            },
+        });
+
+        //一周后兑换的
+        new Drag({
+            dragEle: '.drag', tarEle: '.box1',
+            onStart: function (e) {
+                // e.innerHTML = "我被抓到了";
+            },
+            onMove: function (e) {
+                // e.innerHTML = "我在移动";
+                // console.log('move');
+            },
+            onMoveIn: function (e) {
+                e.style.cssText = "opacity: 1;"
+            },
+            onEnd: function (e) {
+                num--;
+                console.log(num);
+                box1Number++;
+                Box1egg.innerHTML = box1Number;
+                Box1Hen.innerHTML = box1Number;
+                Box1Integral.innerHTML = box1Number * 12;
+
+                let hebIntegral=box1Number * 12;
+                console.log(hebIntegral);
+                
+               localStorage.setItem('hebdomad',box1Number)
+               localStorage.setItem('hebdomadIntegrals',hebIntegral)
+                console.log('我已移入B区域');
+                arr();
+                e.remove();
+            },
+        });
+        function arr() {
+            console.log(num);
+            
+            if (num==0) {
+                setTimeout(function () {
+                   window.location.href='drag2.html'
+                }, 50)
+            }
+        }
+
+    </script>
+</body>
+
+</html>

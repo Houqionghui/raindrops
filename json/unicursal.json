@@ -1,0 +1,33 @@
+[
+  {
+  "id":1,
+  "img":"./img/game4/图片1.png",
+  "value":[1,2]
+},
+{
+  "id":2,
+  "img":"./img/game4/图片2.png",
+  "value":[1,2]
+},
+{
+  "id":3,
+  "img":"./img/game4/图片3.png",
+  "value":[1,2]
+},
+{
+  "id":4,
+  "img":"./img/game4/图片4.png",
+  "value":[1,2]
+},
+{
+  "id":5,
+  "img":"./img/game4/图片5.png",
+  "value":[1,2]
+},
+{
+  "id":6,
+  "img":"./img/game4/图片6.png",
+  "value":[1,2]
+}
+
+]

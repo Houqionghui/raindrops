@@ -1,0 +1,76 @@
+html{
+  font-size: 100px;
+}
+/* 首页样式 */
+.cornfield{
+width: 100%;
+height: 100vh;
+background:#eefeff  url(../../img/game1/bj.jpg) no-repeat;
+background-size: 100%;
+background-position: bottom center;
+}
+.cornfield_text{
+  position: relative;
+  top: 3rem;
+  width: 5rem;
+  min-height: 2rem;
+  font-size: 16px;
+  margin: 0 auto;
+  background-color: rgba(194, 181, 181, 0.651);
+  border-radius: 15px;
+}
+
+.cornfield_text p{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: .3rem;
+  padding-bottom: .3rem;
+}
+.directing{
+  position: relative;
+  top: 6rem;
+  left: 4.6rem;
+  width: 3rem;
+  height: 3rem;
+  background: url(../../img/game1/指路牌.png) no-repeat;
+  background-size: 100% 100%;
+}
+.directing p{
+  position: absolute;
+  top: .8rem;
+  left: .7rem;
+  font-size: 18px;
+  color: rgba(0, 128, 0, 0.863);
+}
+
+/* 规则页 */
+.cornfield_rule{
+  position: relative;
+  top: 3rem;
+  display: none;
+}
+.ruleText{
+  width: 6rem;
+  min-height: 4rem;
+  background-color: rgba(194, 181, 181, 0.651);
+  font-size: 16px;
+  margin: auto;
+  border-radius: 15px;
+}
+.cornfield_rule p{
+  width: 82%;
+  margin: 0 auto;
+  padding-top: .5rem;
+}
+.nextPage{
+  width: 2rem;
+  height: .8rem;
+  border-radius: 15px;
+  margin: auto;
+  background-color: rgba(194, 181, 181, 0.651);
+  color: #000000;
+  font-size: 16px;
+  text-align: center;
+  line-height: .8rem;
+  margin-top: .5rem;
+}

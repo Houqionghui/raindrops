@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>金融小测试</title>
+  <script>
+    ; (function anonymous() {
+      let computedREM = function computedREM() {
+        let HTML = document.documentElement,
+          winW = HTML.clientWidth,
+          desW = 750;
+        if (winW >= desW) {
+          HTML.style.fontSize = '100px';
+          return;
+        }
+        HTML.style.fontSize = winW / desW * 100 + 'px';
+      };
+      computedREM();
+      window.addEventListener('resize', computedREM);
+    })();
+  </script>
+  <link rel="stylesheet" href="./css/game3/reset.min.css">
+  <link rel="stylesheet" href="./css/game3/index.css">
+</head>
+
+<body>
+  <div class="believe">
+    <div class="believe-img">
+      <!-- <img src="./img/game3/title.png" alt=""> -->
+    </div>
+    <div class="believe-rule">
+      <h1>游戏规则</h1>
+      <div class="believe-rule-context">
+        现在村长随机给参与游戏的用户分发玉米，每个被随机选中的用户可得到30个玉米，每个玉米可兑换1个积分。村长为鼓励村名们相互赠与的行为，允许村名之间相互赠送玉米，且会配赠双倍数额的玉米给受赠方，受赠方则会得到三倍数额的玉米，且受赠方可以选择返还多少玉米给赠与方。（比如小红被随机选中，得到了30个玉米，他选择给10个给小兰，村长会配赠20个给小兰，所以小兰会得到30个，小兰可以选择返还一些玉米给小红。）
+      </div>
+    </div>
+    <div class="begin">
+      <div class="start">开始游戏</div>
+    </div>
+
+  </div>
+  <!-- <div class="distribute">
+    <div class="distribute_text">
+      <p>正在分发玉米...</p>
+    </div>
+     
+  </div> -->
+ 
+  <div class="mission">
+    <!-- <div class="imgse">
+      <img src="./img/nr.png" alt="">
+    </div> -->
+    <div class="mission-text clearfix">
+      <div class="mission-text-item"> 
+        <p class="ridus"></p>
+      <!-- <div class="introduce">根据系统的角色分配,您和对方有不同的游戏任务</div> -->
+      <div class="rule">
+        <!-- <div class="title">
+          <p>您的任务</p>
+        </div>
+        <div>您现在手里有<span>30元</span>，对方手里没有钱。您可以选择将自己的钱分给对方，对方将得到这个钱数的<span>三倍</span>。</div>
+        <div class="task">对方在收到钱之后的任务是：决定将多少钱返还给您。</div> -->
+      </div>
+      
+      </div>
+    </div>
+    <div class="import">
+      <!-- <img class="imges"src="./img/线框2.png" alt=""> -->
+      <div class="context">
+        <div class="decision">您决定分给对方多少元</div>
+        <div class="inputBox">
+     <div class="inputBox-item">  <input type="text" placeholder="输入" id="giveAs"></div>
+       <button id="btn">确定</button>
+    </div>
+        </div>
+        <div class="rolebegin">
+          <div class="beginbtn">开始</div>
+          <!-- <img src="./img/btn.png" alt=""> -->
+        </div>
+    
+        <div id="luggage" style="display: none;">
+        </div>
+        <div id="noMoney" >
+          <div class="zero">
+            <p>对方给了您<span>0个玉米</span>,游戏结束</p>
+          </div>
+          <div class="Forever">确定</div>
+        </div>
+      </div>
+      <div class="awaitIng">
+        <div class="popUp">
+          <img class="pig" src="./img/game3/pig.svg" alt="">
+          <img class="piggy" src="./img/game3/piggy.svg" alt="">
+          <!-- <img  style="background: url(./img/pig.svg);" src="./img/piggy.svg" alt=""> -->
+          <div class="timeout"></div>
+          <div class="make">请等待对方决策......</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="awaitIng">
+    <div class="timeout"></div>
+    <div>请等待对方决策</div>
+  </div> -->
+  <div class="follow">
+    <div class="follow-shade"></div>
+    <div class="result">
+    </div>
+    <div class="anew">确定</div>
+  </div>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/game3/index.js"></script>
+  <script>
+    let anew=document.getElementsByClassName('anew')[0];
+    anew.addEventListener('click',function(){
+      window.location.href='index4.html'
+    },false)
+  </script>
+</body>
+</html>

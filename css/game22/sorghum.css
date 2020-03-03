@@ -1,0 +1,119 @@
+html{
+  font-size: 100px;
+}
+.sorghum{
+  width: 100%;
+  height: 100vh;
+  background: #bee8f7 url(../../img/game22/bj2.jpg) no-repeat;
+  background-size: 100%;
+  background-position: bottom center;
+  position: fixed;
+  z-index: 33;
+}
+.sorghumText{
+  position: relative;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  height: 5rem;
+  font-size: 14px;
+  background-color: #cccccc;
+  border-radius: 15px;
+}
+.sorghumText p{
+  width: 80%;
+  margin: 0 auto;
+  padding-top:.5rem;
+}
+
+.nextPage{
+  width: 2rem;
+  margin: 0 auto;
+  margin-top:.5rem;
+  height: .6rem;
+  background-color: #ffffff8e;
+  border-radius: 15px;
+  line-height: .6rem;
+  font-size: 16px;
+  text-align: center;
+}
+.choice{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #90dffe 0%, #38a3d1 100%);
+  position: fixed;
+  z-index: 1;
+
+}
+.choiceMin{
+  position: relative;
+  top: 4rem;
+}
+.choiceContent{
+  display: flex;
+  font-size: 14px;
+}
+.choiceLeft{
+  width: 40%;
+  height: 2rem;
+  background-color: #c4b476;
+  margin-right: .4rem;
+  flex: 1;
+}
+.choiceRight{
+  width: 40%;
+  height: 2rem;
+  background-color: #c4b476;
+  flex: 1;
+}
+.choiceMin .btn{
+width: 2rem;
+margin: 0 auto;
+height: .8rem;
+background: honeydew;
+border-radius: 15px;
+line-height: .8rem;
+font-size: 16px;
+text-align: center;
+margin-top: .5rem;
+}
+.scorePage{
+  width: 100%;
+  height: 100vh;  
+  background:#80b34a url(../../img/game22/bj2.jpg) no-repeat top center;
+  background-size: 100%;
+}
+.scorePage .scorePageText{
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  width: 70%;
+  height: 2rem;
+  margin: 0 auto;
+  background-color: #def7b191;
+  border-radius: 15px;
+}
+.scorePageText .earnings{
+  width: 80%;
+  padding-top: .4rem;
+  margin: 0 auto;
+  font-size: 16px;
+}
+.nextGame{
+  position: absolute;
+  top: 5.5rem;
+  left: 0;
+  right: 0;
+  width: 2rem;
+  margin: 0 auto;
+  height: .8rem;
+  background-color: rgba(120, 185, 44, 0.507);
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: .8rem;
+  text-align: center;
+  
+}

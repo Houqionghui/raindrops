@@ -1,0 +1,404 @@
+body,
+html {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+}
+
+html{
+  font-size: 100px;
+
+}
+/* 首页样式 */
+.rainwater{
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+  float: left;
+  cursor: pointer;
+  transition: box-shadow 150ms, z-index 0ms;
+  /* background: linear-gradient(to bottom, #82addb 0%, #ebb2b1 100%); */
+  /* background-color: #cccccc; */
+  background: linear-gradient(to bottom, #57565a 10%, #ededf0 100%);
+
+  position: relative;
+  height: 100%;
+  /* background: #b9cf5e url(../../img/game2/bj3.jpg) no-repeat; */
+  /* background-size: 100% ; */
+  /* background-position: top center; */
+  overflow: hidden;
+}
+.rainwater_content{
+  width: 5rem;
+  min-height:4.5rem;
+  background-color: rgba(168, 166, 165, 0.856);
+  border-radius: 15px;
+  margin: 0 auto;
+  margin-top: .8rem;
+  z-index: 10;
+  position: absolute;
+  left: 0;
+  right: 0;
+  /* display: none; */
+}
+.rainwater_content p{
+  width: 80%;
+  font-size: 16px;
+  color: #ffffff;
+  margin: 0 auto;
+  padding-top: .7rem;
+}
+.rainwater_content .nextPage{
+  width: 80px;
+  height: 40px;
+  line-height: 40px;
+  color: #ffffff;
+  background-color: #66666871;
+  text-align: center;
+  font-size: 16px;
+  margin:  0 auto;
+  border-radius: 5px;
+  margin-top: .3rem;
+  margin-bottom: .3rem;
+}
+.beginGame{
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 2;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  margin-top: 3rem;
+  font-size: 16px;
+  color: #ffffff;
+  background-color: #2b404e;
+  display: none;
+
+}
+
+.grassland{
+  width: 100%;
+  height: 66%;
+  background: url(../../img/game2/bj.png) no-repeat;
+  background-size: 100% 100%;
+  position: absolute;
+  bottom: 0;
+  /* background-position: top ; */
+}
+
+
+/* 点击开始下雨的样式 */
+.rainwater .yudi {
+  position: absolute;
+  opacity: 0;
+  animation: drops 2s infinite ease-in-out;
+  width: 10px;
+  height: 10px;
+  background: url(../../img/game2/水滴.png) no-repeat;
+  background-size: 100% 100%;
+  display: none;
+}
+
+@keyframes drops {
+  0% {
+    opacity: 0;
+  }
+
+  20% {
+    opacity: 1;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: translate3d(10px, 100vh, -10px);
+  }
+}
+
+/* 水桶对话框样式 */
+.bucketBox{
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  display: none;
+}
+.bucketBox .tong{
+  width: 80px;
+  height: 80px;
+  background: url(../../img/game2/水桶.png) no-repeat;
+  background-size: 100% 100%;
+  margin: 0 auto;
+}
+
+.dialog_box{
+  width: 200px;
+  height: 180px;
+  background: url(../../img/game2/对话框1.png)no-repeat;
+  background-size: 100% 100%;
+  font-size: 14px;
+  position: relative;
+  bottom: 2.4rem;
+}
+.dialog_box p{
+  width: 50%;
+  position: absolute;
+  top: .8rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #ffffff;
+
+}
+.dialog_box button{
+  position: absolute;
+  top: 1.7rem;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  width:1rem;
+  height: .5rem;
+  background-color: skyblue;
+  border: 0;
+  border-radius: 5px;
+}
+
+/* 移动水桶接雨水样式 */
+.container {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  /* background: linear-gradient(to bottom, #94c5f8 1%, #a6e6ff 70%, #b1b5ea 100%); */
+  background: linear-gradient(to bottom, #57565a 10%, #ededf0 100%);
+  /* background: url(../../img/game2/bj1.jpg) no-repeat; */
+  /* background-size: 100% 100%; */
+  /* background-position: top centet; */
+  overflow: hidden;
+  z-index: 200;
+}
+.container .drop {
+  position: absolute;
+  /* top: -100%; */
+  width: 10px;
+  height: 10px;
+  background: url('../../img/game2/水滴.png') no-repeat;
+  background-size: 100% 100%;
+  /* outline: 1px solid; */
+  z-index: 2;
+}
+.bucket{
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  width: 60px;
+  height: 80px;
+  background: url(../../img/game2/水桶.png) no-repeat;
+  background-size: 100% 100%;
+  cursor: move;
+  z-index: 10;
+}
+.btn{
+  width: 100px;
+  height: 50px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 50px;
+  background-color: #cd82a0;
+  color: #ffffff;
+  border-radius: 5px;
+  position: absolute;
+  top:50%;
+  left: 0;
+  right: 0;
+  z-index: 4;
+  font-size: 18px;
+}
+.timer{
+  margin-top: .3rem;
+  position: absolute;
+  right: .4rem;
+  font-size: 16px;
+  z-index: 4;
+}
+/* 答题页 */
+.answerBox{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  /* background: linear-gradient(to bottom, #154277 0%, #576e71 30%, #e1c45e 70%, #b26339 100%); */
+  background: url(../../img/game2/bj1.jpg) no-repeat;
+  background-size: 100% 100%;
+  z-index: 1;
+}
+.mainPage{
+  /* width: 100%;
+  height: 100%; */
+}
+ .qno{
+  width:6rem;
+	min-height:6.81rem;
+	margin: 0 auto;
+	margin-top: 2.6rem;
+	background: url(../../img/game2/便贴.png) no-repeat;
+	background-size: 100% 100%;
+}
+  
+.question{
+	width: 230px;
+	margin: 0 auto;
+	/* margin: 30px auto; */
+	font-size: 16px;
+	line-height: 20px;
+	padding-top: .9rem;
+	border-radius: 15px;
+	font-weight: bold;
+	animation: spin 0.6s 1;
+}
+ .answer{
+	width: 230px;
+	margin: 0 auto;
+	background-color: rgba(224, 148, 104, 0.288);
+	font-size: 16px;
+	line-height: 28px;
+	margin-top: 15px;
+	padding-left: 5px;
+	border-radius: 15px;
+	animation: spin 0.6s 1;
+	transition: box-shadow 0.7s;
+}
+.answerBox .timeout{
+font-size: 18px;
+text-align: right;
+color: #ffffff;
+}
+
+.answerlin{
+	padding-bottom: 50px;
+}
+/* 最后页 */
+.initPage{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  /* background: linear-gradient(to bottom, #154277 0%, #576e71 30%, #e1c45e 70%, #b26339 100%); */
+  background: url(../../img/game2/bj1.jpg) no-repeat;
+  background-size: 100% 100%;
+  background-position: top centet;
+}
+.initPage_context{
+  width: 74%;
+  height: 3rem;
+  background-color: #6f71aa6e;
+  margin: 0 auto;
+  font-size: 16px;
+  border-radius: 5px;
+  position: absolute;
+  top: 4rem;
+  left: 0;
+  right: 0;
+}
+.initPage_context .consequence{
+  width: 70%;
+  margin:  0 auto;
+  margin-top: .8rem;
+  color: #000000;
+}
+.consequence span{
+  color: red;
+}
+
+
+
+.weather {
+  position: relative;
+  display: inline-block;
+  width: 2.8rem;
+  height: 1.8rem;
+  /* background: #23b7e5; */
+  border-radius: 8px;
+}
+.cloudy:before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  /* background: url(../../img/game2/乌云.png) no-repeat; */
+  background: #24313f;
+  border-radius: 50%;
+  box-shadow: 
+      #24313f 22px -15px 0 6px,
+      #24313f 57px -6px 0 2px, 
+      #24313f 87px 4px 0 -4px,
+      #24313f 33px 6px 0 6px,
+      #24313f 61px 6px 0 2px,
+      #3b4a5a 29px -23px 0 6px,
+      #3b4a5a 64px -14px 0 2px,
+      #3b4a5a 94px -4px 0 -4px;
+  z-index: 2;
+}
+
+.cloudy:before {
+  animation: cloudMove 2s linear infinite;
+}
+
+
+.cloudy1:before{
+  content: "";
+  position: absolute;
+  top: 75%;
+  left: 60%;
+  transform: translate(-50%, -50%);
+  width: 36px;
+  height: 36px;
+  /* background: url(../../img/game2/乌云.png) no-repeat; */
+  background: #24313f;
+  border-radius: 50%;
+  box-shadow: 
+      #24313f 22px -15px 0 6px,
+      #24313f 57px -6px 0 2px, 
+      #24313f 87px 4px 0 -4px,
+      #24313f 33px 6px 0 6px,
+      #24313f 61px 6px 0 2px,
+      #3b4a5a 29px -23px 0 6px,
+      #3b4a5a 64px -14px 0 2px,
+      #3b4a5a 94px -4px 0 -4px;
+  z-index: 2;
+}
+
+.cloudy1:before {
+  animation: cloudMove 2s linear infinite;
+}
+@keyframes cloudMove {
+  0% {
+      transform: translate(-50%, -50%);
+  }
+  50% {
+      transform: translate(-50%, -60%);
+  }
+  100% {
+      transform: translate(-50%, -50%);
+  }
+}
+.initPage .nextPage{
+  position: absolute;
+  top: 55%;
+  left: 0;
+  right: 0;
+  width: 2rem;
+  height: .8rem;
+  margin: 0 auto;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
+  line-height: .8rem;
+  text-align: center;
+}

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/game2/index.css">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <script src="./js/resize.js"></script>
+</head>
+<body>
+<!-- 移动水桶 -->
+  <div class="container">
+    <!-- <div class="btn">开始接雨水</div> -->
+    <div class="timer">倒计时:<span id="clocks">10</span></div>
+    <div class="bucket"></div>
+    <div class="grassland"></div>
+  </div>
+<!-- 答题页 -->
+<div class="answerBox">
+  <div class="timeout">10</div>
+    <div class="mainPage">
+      <div class="qno"></div>
+    </div>
+    
+</div>
+<!-- 最后页 -->
+<div class="initPage">
+<div class="initPage_context">
+  <div class="consequence">您一共接到了<span id="rainwater"></span>滴雨水，可以兑换<span id="conversion"></span>个积分，接到了总雨水数的<span id="rainwaterPercentage"></span>%，超过了80%的玩家。</div>
+</div>
+<div class="nextPage">确定</div>
+</div>
+  <script src="./js/jquery.js"></script>
+  <script type="module" src="./js/game2/index.js"></script>
+<script>
+ let nextPage=document.getElementsByClassName('nextPage')[0];
+ nextPage.addEventListener('click',function(){
+  window.location.href='index3.html';
+ },false)
+</script>
+</body>
+</html>

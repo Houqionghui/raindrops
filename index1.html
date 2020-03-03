@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0;" name="viewport" />
+  <link rel="stylesheet" href="./css/game1/index1.css">
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <script src="./js/resize.js"></script>
+</head>
+<body>
+  <div class="cornfield">
+    <div class="cornfield_home">
+      <div class="cornfield_text">
+        <p> 开始一个农场游戏，游戏中的每一个环节都可以累积积分，游戏结束后，积分可兑换奖品。</p>
+       </div>
+       <div class="directing">
+         <p id="start">开始游戏</p>
+       </div>
+    </div>
+    <!--规则页 -->
+    <div class="cornfield_rule">
+      <div class="ruleText">
+          <p>现在有两块玉米地，每块玉米地都有可能产出两种类型的玉米：高甜玉米（高收益）或低甜玉米（低收益）。
+            产出各种玉米的概率稍后给出。村长将分发其中一块玉米地给您，您可以选择一块。稍后给出概率后，
+            您会选择哪一块玉米地？
+          </p>    
+      </div>
+      <div class="nextPage">确定</div>
+    </div>
+  </div>
+  
+<script>
+  function startGame(){
+    let start=document.querySelector('#start');
+    let cornfieldHome=document.querySelector('.cornfield_home');
+    let cornfieldRule=document.querySelector('.cornfield_rule');
+    let nextPage=document.querySelector('.nextPage');
+    start.addEventListener('click',function(){
+      cornfieldHome.style.display='none';
+      cornfieldRule.style.display='block';
+    },false)
+    nextPage.addEventListener('click',function(){
+      window.location.href='cornfield.html'
+    },false)
+  }
+  startGame();
+</script>
+</body>
+</html>

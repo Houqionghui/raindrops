@@ -1,0 +1,72 @@
+html{
+  font-size: 100px;
+}
+.chooseLand{
+  width: 100%;
+  height:100vh;
+  background-color: rosybrown;
+  position: fixed;
+  z-index: 2;
+}
+.probability{
+  width: 100%;
+  /* margin-top: 1rem; */
+/* display: flex; */
+}
+.DoorCt{
+  overflow: hidden;
+}
+.probability .left{
+  width: 1.6rem;
+  float: left;
+  background-color: red;
+  margin-bottom: .2rem;
+  margin-left: .1rem;
+  font-size: 12px;
+}
+.probability span{
+  display: inline-block;
+}
+.probability .right{
+  width: 1.7rem;
+  float:right;
+  background-color: green;
+  margin-bottom: .2rem;
+  font-size: 12px;
+  margin-right: .1rem;
+}
+.finally{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background:#bee8f7 url(../../img/game1/bj2.jpg) no-repeat bottom center;
+  background-size: 100%;
+}
+.finally_text{
+  width: 70%;
+  margin: auto;
+  border-radius: 15px;
+  background: skyblue;
+  margin-top: 1rem;
+}
+.finallyContext{
+  width: 80%;
+  margin: auto;
+  font-size: 16px;
+  padding-top: .8rem;
+  padding-bottom: .8rem;
+}
+.nextGame{
+  position: absolute;
+  top: 3.5rem;
+  left: 0;
+  right: 0;
+  width: 2rem;
+  margin: 0 auto;
+  height: .4rem;
+  background-color: rgba(120, 185, 44, 0.507);
+  border-radius: 15px;
+  font-size: 16px;
+  line-height: .4rem;
+  text-align: center;
+}

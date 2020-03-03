@@ -1,0 +1,549 @@
+
+html{
+  font-size: 100px;
+}
+.believe{
+	position: fixed;
+	background:url(../../img/game3/bj1.jpg) no-repeat;
+	background-size: 100% 100%;
+	height: 100vh;
+	width: 100%;
+	z-index: 2;
+}
+.believe-img {
+position: relative;
+top: 42px;
+}
+.believe-img img{
+	width:5.96rem;
+	height:1.58rem;
+	display: block;
+	margin: 0 auto;
+}
+ .begin {
+	width:3.27rem;
+height:0.91rem;
+background:#c0cb52;
+margin: 0 auto;
+border-radius: 50px;
+position: relative;
+top: 14%;
+}
+.begin .start{
+	text-align: center;
+	line-height: 0.91rem;
+	font-size:0.36rem;
+	color: #FFFFFF;
+}
+.believe-rule{
+	box-sizing: border-box;
+	width:5.96rem;
+	min-height:3.78rem;
+	background:rgba(114, 113, 112, 0.685);
+	border-radius:.1rem;
+	margin:0 auto;
+	position: relative;
+	top: 10%;
+}
+.believe-rule h1{
+	font-size:0.44rem;
+	color: #FFFFFF;
+	padding-top: 0.52rem;
+	text-align: center;
+
+}
+.believe-rule-context{
+	width:5.02rem;
+	min-height:1.7rem;
+	font-size:0.3rem;
+	margin: 0 auto;
+	color: #FFFFFF;
+	padding-bottom: .4rem;
+}
+.mission{
+	height: 100vh;
+	width: 100%;	
+	position: fixed;
+	z-index: 1;
+	background: #b9cf5e url(../../img/game3/bj3.jpg) no-repeat;
+	background-position: top center;
+	background-size: 100%;
+}
+.imgse{
+	position: absolute;
+	top: 90px;
+	left: 0;
+	right: 0;
+}
+.imgse img{
+	width: 6rem;
+	height: 5rem;
+	display: block;
+	margin: 0 auto;
+
+}
+.mission .rule{
+	box-sizing: border-box;
+	font-size: 18px;
+}
+.rule span{
+	color: red;
+}
+
+.mission-text  .ridus{
+	width: 10px;
+	height: 10px;
+	border-radius: 50%;
+	background: rgba(225,134,74,1);
+	text-align: right;
+	float: right;
+}
+
+/* .mission .rule .title{
+	width: 80px;
+	height: 30px;
+	border-radius: 5px;
+	line-height: 20px;
+	background: rgba(225,134,74,1);
+	margin-bottom: 5px;
+	margin-top: 5px;
+
+} */
+.mission .rule .title p{
+	line-height: 30px;
+	text-align: center;
+}
+.mission-text{
+	width: 6rem;
+	min-height:3rem;
+	/* height: 5.4rem; */
+	margin: 0 auto;
+	z-index: 100;
+	position: absolute;
+	top: 1rem;
+	right: 0;
+	left: 0;
+	vertical-align: middle;
+	background-color: rgba(187, 175, 156, 0.678);
+	color: #FFFFFF;
+	border-radius: 10px;
+}
+.mission-text .mission-text-item{
+	width: 5rem;
+	margin: 0 auto;
+	padding-top: .48rem;
+}
+.mission-text .introduce{
+	font-size: 18px;
+	padding-top: 10px;
+
+}
+.mission .task{
+	box-sizing: border-box;
+	font-size: 18px;
+	margin-top: 5px;
+	/* padding-bottom: 1rem; */
+}
+.import{
+	position: relative;
+	top: 5rem;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+/* .import .imges{
+	width: 80%;
+	height: 3.3rem;
+	display: block;
+	margin: 0 auto;
+	position: relative;
+} */
+.context{
+	width: 80%;
+	height:2.5rem;
+	background-color: rgba(187, 175, 156, 0.678);;
+	box-sizing: border-box;
+	font-size: 16px;
+	position: absolute;
+	top: 3px;
+	left: 10%;
+	border-radius: 10px;
+	color: #FFFFFF;
+}
+.rolebegin{
+	width:2.06rem;
+	height: 0.8rem;
+	margin:  0 auto;
+	background: rgba(225,134,74,1);
+	border-radius: 50px;
+}
+.rolebegin .beginbtn{
+text-align: center;
+line-height: 0.8rem;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+.distribute{
+	position: absolute;
+	background:url(../../img/game3/bj1.jpg) no-repeat;
+	background-size: 100% 100%;
+	height: 100vh;
+	width: 100%;
+	z-index: 10;
+	display: none;
+}
+.distribute_text{
+	width: 5rem;
+	height: 2rem;
+	background:url(../../img/game3/await.png) no-repeat;
+	background-size: 100% 100%;
+	margin: 0 auto;
+	position: absolute;
+	top: 3rem;
+}
+
+.rolebegin img{
+	width:2.06rem;
+	height:0.83rem;
+	display: block;
+}
+
+.context .inputBox{
+	padding-left: 10px;
+	text-align: center;
+}
+.inputBox .inputBox-item input{
+margin-right: 5px;
+}
+.inputBox .inputBox-item{
+	/* width: 89px; */
+	display: inline-block;
+	/* margin-right: 8px; */
+	font-size: 16px;
+	margin-top: 5px;
+}
+
+#btn{
+	display: block;
+	width: 100px;
+	height: 25px;
+	background: rgba(225,134,74,1);
+	margin: 0 auto;
+	border-radius:8px;
+	margin-top:.4rem;
+	border: 0;
+	color: #FFFFFF;
+}
+#luggage{
+	width: 6rem;
+	height: 3.3rem;
+	display: block;
+	margin: 0 auto;
+	/* background-color: #BBAF9C; */
+	background-color: rgba(187, 175, 156, 0.678);
+	border-radius: 10px;
+}
+#luggage .person {
+	display: inline-block;
+}
+ 
+#luggage .luggageBox{
+padding-top: 35px;
+padding-left: 20px;
+font-size: 18px;
+color: #FFFFFF;
+}
+
+#luggage .getMoney{
+	display: inline-block;
+}
+.luggageBox .resolve{
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+.Mymoney input{
+	width:2.89rem;
+	height:0.58rem;
+	background:#ffffff;
+	border-radius:0rem;
+	border: none;
+	color: #000000;
+	font-size: 18px;
+	padding-left: 5px;
+}
+#luggage #buton{
+	width:1.9rem;
+	height:0.58rem;
+	background: rgba(225,134,74,1);
+	border-radius:0rem;
+	border: none;
+	margin-left: 10px;
+	color: #FFFFFF;
+}
+.context .Mymoney input{
+	width: 150px;
+	height: 30px;
+	background:rgba(164,124,255,1);
+	border-radius:8px;
+	margin-right: 10px;
+	border: 0;
+	font-size: 18px;
+	color: #ffffff;
+	padding-left: 10px;
+	font-weight: normal;
+}
+.context .Mymoney button{
+	width:90px;
+	height:30px;
+	background:rgba(255,213,8,1);
+	border-radius:8px;
+	border: 0;
+}
+.context .decision{
+	margin-top: .5rem;
+	margin-bottom: 5px;
+	padding-left: 10px;
+	text-align: center;
+}
+.awaitIng{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color:rgba(33, 35, 36, 0.829);
+	opacity: 1;
+	z-index: 990;
+	display: none;
+}
+.awaitIng .timeout{
+color: red;
+z-index: 10;
+}
+
+.awaitIng .popUp{
+	position: relative;
+	top: 30%;
+	right: 0;
+	left: 0;
+	width: 300px;
+	height: 250px;
+	background-color: #fff;
+	z-index: 100;
+	margin: 0 auto;
+}
+.awaitIng .popUp .pig{
+	width: 300px;
+	height: 170px;
+	display: block;
+	margin: 0 auto;
+	border-bottom: 2px solid #000000;
+}
+.awaitIng .popUp  .piggy{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: -60px;
+}
+.awaitIng .popUp .make{
+margin-top: 25px;
+	font-size: 20px;
+	text-align: center;
+}
+
+.follow{
+	width: 100%;
+	height: 100vh;
+	background:#bbcf5f url(../../img/game3/bj2.jpg) no-repeat;
+	background-position: top center;
+	background-size: 100%;
+}
+.follow .follow-shade{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	/* background-color:rgba(33, 35, 36, 0.829); */
+	opacity: 1;
+}
+.follow .result{
+	width: 6.5rem;
+	height: 4rem;
+	background-color: #b18b2470;
+	margin: 0 auto;
+	font-size: 16px;
+	position: relative;
+	top: 20%;
+	left: 0;
+	right: 0;
+}
+
+.result .result-context{
+	width: 5.8rem;
+	margin: 0 auto;
+	/* text-align: center; */
+}
+.follow .result span{
+	color: red;
+}
+.follow .result .title{
+	font-size:20px;
+	color: red;
+	font-weight:400;
+	color:rgba(255,0,0,1);
+	font-weight: bold;
+}
+
+.follow .result .decide{
+	text-align: left;
+	padding-top: 3px;
+}
+
+.follow .result .return{
+	text-align: left;
+	padding-top: 3px;
+}
+
+.follow .result .obtain{
+	/* text-align: center; */
+	padding-top: .3rem;
+}
+.follow .result .earnings{
+	width: 3.6rem;
+	height:.8rem;
+	line-height: .8rem;
+	font-size:.35rem;
+	background: rgba(225,134,74,1);
+	margin-top:.2rem;
+	margin-bottom: .2rem;
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.result .cyclo{
+	padding-top: 10px;
+	margin-bottom: 10px;
+	text-align: right;
+}
+.result .cyclo span{
+width:10px;
+height:10px;
+background: rgba(225,134,74,1);
+display: inline-block;
+border-radius:50%;
+margin-left: 5px;
+}
+
+.follow .anew{
+	width: 2rem;
+	height: .6rem;
+	margin: 0 auto;
+	position: relative;
+	top: 37%;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background: #f7fbfd;
+	font-size: 16px;
+	line-height: .6rem;
+	text-align: center;
+	color: #000000;
+	font-weight: bold;
+	border-radius: 15px;
+	transition: box-shadow 0.3s;
+}
+
+.obtain .left{
+	display: inline-block;
+	width: 50px;
+	border:1px solid rgb(133, 139, 108);
+	vertical-align: middle;
+	margin-right: 10px;
+}
+.obtain .right{
+	display: inline-block;
+	width: 50px;
+	border:1px solid rgb(133, 139, 108);
+	vertical-align: middle;
+	margin-left: 10px;
+}
+
+#noMoney{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	height: 100vh;
+	background-color:rgba(33, 35, 36, 0.829);
+	opacity: 1;
+	z-index: 980;
+	display: none;
+}
+#noMoney .zero{
+	width:80%;
+	height: 100px;
+	margin: 0 auto;
+	background: url(../../img/game3/jieshu.png) no-repeat;
+	background-size: 100% 100%;
+	position: absolute;
+	top: 35%;
+	left: 0;
+	right: 0;
+}
+
+#noMoney .zero p{
+	font-size: 18px;
+	text-align: center;
+	padding-top: 30px;
+}
+#noMoney .zero p span{
+	color: red;
+}
+.Forever{
+	width: 200px;
+	height: 50px;
+	margin: 0 auto;
+	position: relative;
+	top: 50%;
+	background-color: #FFD508;
+	font-size: 20px;
+	line-height: 50px;
+	text-align: center;
+	color: #000000;
+	margin: 30px calc((375px - 180px)/2);
+	font-weight: bold;
+	box-shadow: 0px 6px 10px rgb(133, 139, 108);
+	transition: box-shadow 0.3s;
+}	
+
+/* 
+@media screen and (max-height:736px){
+	.imgse img{
+		height: 33%;
+	}
+
+@media screen and (max-height:731px){
+	.imgse img{
+		height: 34%;
+	}
+
+@media screen and (max-height:667px) {
+	.imgse img{
+		height: 36%;
+	}
+}
+@media screen and (max-height:640px){
+	.imgse img{
+		height: 37%;
+	}
+	.import .imges{
+		height: 195px;
+	}
+}
+@media screen and (max-width:414px) {
+	.imgse img{
+		height: 40%;
+	}
+}
+
+
+} */

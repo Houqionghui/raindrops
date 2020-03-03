@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>rainwater</title>
+  <!-- 公共样式 -->
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <!-- 内容样式 -->
+  <link rel="stylesheet" href="./css/game2/index.css">
+  <link rel="stylesheet" href="./css/animate.css">
+  <script src="./js/resize.js"></script>
+</head>
+<body>
+  <div class="rainwater">
+    <div class="mainPage_colus">
+      <!-- <img src="./img/game2/乌云1.png" alt="" class="mainPage_colus1">
+      <img src="./img/game2/乌云.png" alt="" class="mainPage_colus2"> -->
+      <!-- <img src="./img/game2/乌云1.png" alt="" class="mainPage_colus3"> -->
+      <div class="weather cloudy"></div>
+      <div class="weather cloudy1"></div>
+  </div>
+    <div class="rainwater_content">
+      <p>农场干旱已久，马上将迎来一场雨，您可以用水桶来接雨水，接到的每一滴雨水可兑换一个积分。您有10秒钟的时间接雨。</p>
+      <div class="nextPage">确定</div>
+     
+    </div>
+    <div class="grassland"></div>
+    <div class="beginGame">开始下雨</div>
+    <!-- 下雨样式 -->
+    <div class="yudi"></div>
+    <div class="bucketBox">
+      <div class="dialog_box">
+        <p>您可以左右移动水桶来接雨水</p>
+        <button id="btnGame">确定</button>
+      </div>
+      <div class="tong"></div>
+    </div>
+  </div>
+  <script src="./js/jquery.js"></script>
+  <!-- <script src=""></script> -->
+  <script>
+    let nextPage = document.getElementsByClassName('nextPage')[0];
+    let beginGame = document.getElementsByClassName('beginGame')[0];
+    let rainwaterContent = document.getElementsByClassName('rainwater_content')[0];
+    let bucketBox = document.getElementsByClassName('bucketBox')[0];
+    let btnGame=document.getElementById('btnGame');
+    let yudi = document.getElementsByClassName('yudi');
+    nextPage.addEventListener('click', function () {
+      rainwaterContent.style.display = 'none';
+      beginGame.style.display = 'block'
+    }, false)
+    beginGame.addEventListener('click', function () {
+      setTimeout(function () {
+        beginGame.style.display = 'none';
+        bucketBox.style.display = 'block';
+        $('.dialog_box').addClass('animated rotateIn ');
+        setTimeout(function () {
+          $('.dialog_box').removeClass('rotateIn');
+        }, 2000);
+        anima();
+      }, 1000)
+    })
+    
+    btnGame.addEventListener('click',function(){
+      window.location.href='rainwater.html';
+    },false)
+    function anima() {
+      let $content = $('.rainwater');
+      let initNumber = 0;
+      for (let i = 0; i < 30; i++) {
+        let lefts = (Math.floor(Math.random() * 8 + 2));
+        let delay = (Math.floor(Math.random() * 50 + 2));
+        initNumber += lefts;
+        let $div = $('<div/>').addClass('yudi').css({
+          "left": `${initNumber}%`,
+          "top": `${lefts}%`,
+          "animation-delay": `${delay / 10}s`,
+          "display": 'block'
+        });
+        $content.append($div);
+      }
+    }
+
+
+
+  </script>
+
+</body>
+
+</html>

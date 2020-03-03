@@ -1,0 +1,50 @@
+html{
+  font-size: 100px;
+}
+.raiseChickens{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(to bottom, #82addb 0%, #ebb2b1 100%);
+  position: fixed;
+  z-index: 2;
+}
+.raiseChickens_text{
+  position: absolute;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  width: 80%;
+  margin: 0 auto;
+  height: 5.5rem;
+  background-color: #cccccc85;
+  border-radius: 15px;
+}
+.raiseChickens_text p{
+  width: 80%;
+  margin: 0 auto;
+  padding-top: .5rem;
+  font-size: 16px;
+}
+.nextPage{
+  
+ 
+}
+.nextPageBtn{
+  width: 2rem;
+  height: .6rem;
+  margin: 0 auto;
+  border-radius: 5rem;
+  background-color: rosybrown;
+  text-align: center;
+  font-size: 16px;
+  line-height: .6rem;
+  margin-top: .4rem;
+}
+.list {
+
+  width: 90%;
+  /* height: 5rem; */
+  user-select: none;
+  cursor: pointer;
+  margin: 0 auto;
+}

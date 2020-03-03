@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/reset.min.css">
+  <link rel="stylesheet" href="./css/game1/cornfield.css">
+</head>
+<body>
+  <div class="chooseLand">
+    <div class="chooseLand_Context">
+  <div class="probability clearfix">
+ <div class="DoorCt">
+  <div class="left"><span>10%产高甜玉米，收益20积分<br>90%产低甜玉米，收益16积分</span>
+    <br><input type="radio"name="box1" value="1" data-index="1"></div>
+  <div class="right"><span>10%产高甜玉米，收益38.5积分<br>90%产低甜玉米，收益1积分</span><br>
+    <input type="radio" name="box1" value="1" data-index="2"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>20%产高甜玉米，收益20积分<br>80%产低甜玉米，收益16积分</span><br><input type="radio"name="box2" value="2" data-index="1"></div>
+  <div class="right"><span>20%产高甜玉米，收益38.5积分<br>80%产低甜玉米，收益1积分</span><br><input type="radio"  value="2" name="box2" data-index="2"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>30%产高甜玉米，收益20积分<br>70%产低甜玉米，收益16积分</span><br><input type="radio"name="box3" data-index="1" value="3"></div>
+  <div class="right"><span>30%产高甜玉米，收益38.5积分<br>70%产低甜玉米，收益1积分</span><br><input type="radio" name="box3" data-index="2" value="3"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>40%产高甜玉米，收益20积分<br>60%产低甜玉米，收益16积分</span><br><input type="radio"name="box4" data-index="1" value="4"></div>
+  <div class="right"><span>40%产高甜玉米，收益38.5积分<br>60%产低甜玉米，收益1积分</span><br><input type="radio" name="box4" data-index="2" value="4"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>50%产高甜玉米，收益20积分<br>50%产低甜玉米，收益16积分</span><br><input type="radio"name="box5" data-index="1" value="5"></div>
+  <div class="right"><span>50%产高甜玉米，收益38.5积分<br>50%产低甜玉米，收益1积分</span><br><input type="radio" name="box5" data-index="2" value="5"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>60%产高甜玉米，收益20积分<br>40%产低甜玉米，收益16积分</span><br><input type="radio"name="box6" data-index="1" value="6"></div>
+  <div class="right"><span>60%产高甜玉米，收益38.5积分<br>40%产低甜玉米，收益1积分</span><br><input type="radio" name="box6" data-index="2" value="6"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>70%产高甜玉米，收益20积分<br>30%产低甜玉米，收益16积分</span><br><input type="radio"name="box7" data-index="1" value="7"></div>
+  <div class="right"><span>70%产高甜玉米，收益38.5积分<br>30%产低甜玉米，收益1积分</span><br><input type="radio" name="box7" data-index="2" value="7"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>80%产高甜玉米，收益20积分<br>20%产低甜玉米，收益16积分</span><br><input type="radio"name="box8" data-index="1" value="8"></div>
+  <div class="right"><span>80%产高甜玉米，收益38.5积分<br>20%产低甜玉米，收益1积分</span><br><input type="radio" name="box8" data-index="2" value="8"></div>
+ </div>
+ <div class="DoorCt">
+  <div class="left"><span>90%产高甜玉米，收益20积分<br>10%产低甜玉米，收益16积分</span><br><input type="radio"name="box9" data-index="1" value="9"></div>
+  <div class="right"><span>90%产高甜玉米，收益38.5积分<br>10%产低甜玉米，收益1积分</span><br><input type="radio" name="box9" data-index="2" value="9"></div>
+ </div>
+ <div class="DoorCt" >
+  <div class="left"><span>100%产高甜玉米，收益20积分</span><br><input type="radio"name="box1" value="10"></div>
+  <div class="right"><span>100%产高甜玉米，收益38.5积分</span><br><input type="radio" name="box1" value="10"></div>
+ </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="finally">
+    <div class="finallyContent">
+    </div>
+    <div class="nextGame">确定</div>
+  </div>
+<script src="./js/jquery.js"></script>
+<script src="./js/game1/index.js"></script>
+<script>
+ let nextGame=document.getElementsByClassName('nextGame')[0];
+ nextGame.addEventListener('click',function(){
+   window.location.href='sorghum.html'
+ },false)
+</script>
+</body>
+</html>

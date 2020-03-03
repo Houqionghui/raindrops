@@ -1,0 +1,211 @@
+
+html{
+  font-size: 100px;
+}
+
+.dragBox{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  /* background:  #9a7c5e url(../../img/game1/bj1.png) no-repeat; */
+  /* background-position: top center; */
+  /* background-size: 100%;  */
+    background-color: rgb(121, 233, 195);
+    
+}
+.content {
+  /* min-height: calc(100vh - 300px); */
+  height: 5.5rem;
+}
+
+.list {
+  width: 90%;
+  height: 6rem;
+  user-sfelect: none;
+  cursor: pointer;
+  margin: 0 auto;
+}
+
+.box {
+  width:3.55rem ;
+  height:3.52rem ;
+  /* background: url(../../img/game1/index3/金币袋子.png)no-repeat; */
+  /* background-size: 100% 100%; */
+  /* opacity: .5; */
+  background-color: sandybrown;
+  display: inline-block;
+  position: relative;
+  top: .83rem;
+  left:-.4rem;
+}
+.box_text{
+  width: 2.8rem;
+  font-size: 16px;
+  margin-left: .6rem;
+  position: absolute;
+  bottom: -.8rem;
+}
+.box1_text{
+  min-width: 3rem;
+  margin: auto;
+  font-size: 16px;
+  position: absolute;
+  bottom: -.9rem;
+  left: 0;
+  right: 0;
+}
+.drag {
+  display: inline-block;
+  cursor: pointer;
+  background: url("../../img/game5/鸡.png") no-repeat;
+  background-size: 100% 100%;
+  width: 1.2rem;
+  height: 1.2rem;
+  margin: 0 auto;
+  text-align: center;
+}
+.box1 {
+  width: 4.3rem;
+  height:3rem ;
+  /* background: url(../../img/game1/index3/A房子.png)no-repeat; */
+  /* background-size: 100% 100%; */
+  background-color: salmon;
+  display: inline-block;
+  position: relative;
+  top: -2.63rem;
+  right:-3.4rem;
+  /* opacity: .5; */
+}
+.drag span {
+  width:1.1rem;
+  height:0.62rem;
+  display: inline-block;
+  position: relative;
+  top: 100px;
+  left: -.3rem;
+  -webkit-transform : scale(0.84,0.84) ;
+  background:rgba(255,245,223,1);
+  border-radius:5px;
+}
+
+.framesTwo{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  background: paleturquoise;
+}
+
+.framesTwo_text {
+  width: 80%;
+  min-height: 5rem;
+  background-color: palevioletred;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: 3rem;
+}
+.framesTwo_text p{
+  width: 80%;
+  padding-top: .4rem;
+  font-size: 14px;
+  margin: auto;
+}
+.pageDown{
+  width: 2rem;
+  height: .6rem;
+  background-color: plum;
+  border-radius: 15px;
+  margin: auto;
+  margin-top: .2rem;
+}
+.pageDown .nextPageBtn{
+  font-size: 14px;
+  text-align: center;
+  line-height: .6rem;
+}
+
+
+/* 规则二 */
+.dragBox2{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  z-index: 2;
+  background-color: rgb(121, 233, 195); 
+}
+.dragBox2_content{
+height: 6rem;
+}
+.chickenBox{
+  width:3.5rem ;
+  height:3.52rem ;
+  background-color: sandybrown;
+  display: inline-block;
+  position: relative;
+  top: .83rem;
+  /* left:-.4rem; */
+}
+.chickenBox1{
+  width: 3.5rem;
+  height:3.79rem ;
+  background-color: salmon;
+  position: relative;
+  top: -2.63rem;
+  right:-4rem;
+}
+.chickenBox_text{
+  width: 2.8rem;
+  font-size: 16px;
+  margin-left: .6rem;
+  position: absolute;
+  bottom: -.8rem;
+}
+.chickenBox1_text{
+  min-width: 3rem;
+  margin: auto;
+  font-size: 16px;
+  position: absolute;
+  bottom: -.9rem;
+  left: 0;
+  right: 0;
+}
+
+/* 最后页 */
+.resultPage{
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(216, 219, 213);
+  position: fixed;
+}
+
+.resultPage_content{
+  width: 80%;
+  min-height: 5rem;
+  background-color: rgba(119, 0, 0, 0.322);
+  margin: auto;
+  font-size: 16px;
+  margin-top: 3rem;
+  border-radius: 5px;
+}
+.resultPage_content .aggregate{
+width: 80%;
+margin: auto;
+padding-top: .6rem;
+}
+.resultPage_content .aggregate p span{
+  color: red;
+}
+.imgBox {
+  position: relative;
+ left: 5rem;
+  width: 2.5rem;
+  height: 2rem;
+  background:url(../../img/game5/对话框.png) no-repeat;
+  background-size: 100% 100%;
+  text-align: center;
+  font-size: 12px;
+  color: aliceblue;
+}
+.imgBox .text{
+padding-top: .6rem;
+}

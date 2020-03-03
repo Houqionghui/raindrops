@@ -1,0 +1,129 @@
+html{
+  font-size: 100px;
+}
+.unicursal{
+  width: 100%;
+  height: 100vh;
+  background-color: pink;
+  position: fixed;
+  z-index: 2;
+  
+}
+.unicursal .unicursalRule{
+  position: relative;
+  top: 3rem;
+  width: 80%;
+  margin: auto;
+  height: 5rem;
+  border-radius: 15px;
+  background-color: rgba(0, 0, 0, 0.411);
+}
+.unicursalRule p{
+  width: 80%;
+  margin: auto;
+  font-size: 16px;
+  padding-top: .5rem;
+}
+.unicursalRule .unicursal_nextPage{
+  width: 2rem;
+  height: .8rem;
+  line-height: .8rem;
+  background-color: rgba(218, 133, 22, 0.247);
+  border-radius: 20px;
+  font-size: 16px;
+  margin: 0 auto;
+  text-align: center;
+}
+.topicText{
+width: 80%;
+margin: auto;
+}
+.topicText label{
+  font-size: 16px;
+  padding-top: 1rem;
+}
+.topicText label input{
+  width: 20px;
+  height: 20px;
+  vertical-align: middle;
+  margin-right: .2rem;
+}
+.topicText label span{
+  vertical-align: middle;
+}
+.timeoutBox{
+  font-size: 16px;
+  padding-top: .3rem;
+  text-align: right;
+  padding-right: .3rem;
+  margin-bottom: .3rem;
+}
+.unicursalContent{
+  width: 100%;
+  height: 100vh;
+  background: salmon;
+    position: fixed;
+  z-index: 1;
+
+}
+.unicursalContent_Rule{
+ 
+  width: 70%;
+  height: 3rem;
+  background-color: teal;
+  border-radius: 15px;
+  margin: auto;
+}
+.unicursalContent_Rule p{
+  font-size: 16px;
+  width: 80%;
+  margin: auto;
+  padding-top: .6rem;
+}
+.topicText_img{
+width: 20%;
+margin: 0 auto;
+margin-top: 1rem;
+margin-bottom: 1rem;
+}
+.topicText_img img{
+  width: 80px;
+  height: 80px;
+}
+/* 最后页*/
+.trailerPage{
+  width: 100%;
+  height: 100vh;
+  background: salmon;
+}
+
+.trailerPage_Content{
+  position: relative;
+  top: 3rem;
+  left: 0;
+  right: 0;
+  width: 60%;
+  margin: 0 auto;
+  height: 3rem;
+  font-size: 18px;
+  background-color: seagreen;
+  border-radius: 15px;
+}
+.trailerPage_Content .text{
+  width: 80%;
+  margin: auto;
+  padding-top: .5rem;
+}
+.trailerPage_Content .text span{
+color: red;
+}
+.btnPage{
+  width: 2rem;
+  height: .8rem;
+  background-color: #ffffff;
+  text-align: center;
+  line-height: .8rem;
+  margin:auto;
+  border-radius: 15px;
+  margin-top: .4rem;
+}
