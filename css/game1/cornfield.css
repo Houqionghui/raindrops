@@ -20,7 +20,7 @@ html{
   width: 1.6rem;
   float: left;
   background-color: red;
-  margin-bottom: .2rem;
+  margin-bottom: .1rem;
   margin-left: .1rem;
   font-size: 12px;
 }
@@ -31,7 +31,7 @@ html{
   width: 1.7rem;
   float:right;
   background-color: green;
-  margin-bottom: .2rem;
+  margin-bottom: .1rem;
   font-size: 12px;
   margin-right: .1rem;
 }
@@ -58,7 +58,7 @@ html{
 }
 .nextGame{
   position: absolute;
-  top: 3.5rem;
+  top: 3rem;
   left: 0;
   right: 0;
   width: 2rem;
